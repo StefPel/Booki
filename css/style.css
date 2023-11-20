@@ -1,0 +1,865 @@
+/* GENERAL */
+
+* {
+    font-family: "Raleway", sans-serif;
+  
+    box-sizing: border-box;
+  
+    margin: 0px;
+    padding: 0px;
+  }
+
+  html {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  body {
+    padding: 0 50px 0 50px;
+  }
+
+  .container_main {
+    min-width: 320px;
+    max-width: 1440px;
+}
+
+  h3 {
+    font-size: 1em;
+  }
+  
+  h4 {
+    font-size: 0.87em;
+  }
+  
+  p {
+    font-size: 1.1em;
+  }
+  
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  li {
+    list-style: none;
+  }
+  
+  span {
+    font-weight: 500;
+  }
+  
+  input {
+    border: none;
+  }
+  
+  /* HEADER */
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 45px;
+  }
+  
+  .navbar-list {
+    display: flex;
+  }
+  
+  .logo {
+    height: 20px;
+  }
+  
+  .navbar-items {
+    margin-left: 40px;
+    color: black;
+  }
+  
+  .navbar-links {
+    padding: 43px 15px 0px 15px;
+  }
+  
+  .navbar-links:hover {
+    color: #0065fc;
+    border-top: #0065fc 3px solid;
+  }
+  
+  /* SECTION RECHERCHE */
+  
+  .search-section {
+    margin-top: 70px;
+  }
+  
+  h1 {
+    margin-bottom: 8px;
+  }
+  
+  /* formulaire de recherche */
+  
+  .search-form {
+    display: flex;
+  
+    position: relative;
+  
+    height: 50px;
+    width: 450px;
+    margin-top: 20px;
+  }
+  
+  .location-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    position: absolute;
+  
+    height: 100%;
+    width: 50px;
+    background-color: #f2f2f2;
+    border-radius: 15px 0px 0px 15px;
+  
+    font-size: 1.3em;
+  }
+  
+  .search-input {
+    width: 100%;
+    height: 100%;
+  
+    padding-left: 70px;
+    padding-right: 155px;
+  
+    border-radius: 15px;
+    border: 2px solid #f2f2f2;
+  
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  
+  .search-input::placeholder {
+    opacity: 1;
+  }
+  
+  .search-input:focus {
+    outline: 2px solid #0065fc;
+  }
+  
+  .search-submit {
+    position: absolute;
+    right: 0;
+  
+    height: 100%;
+    border-radius: 0px 15px 15px 0px;
+    background-color: #0065fc;
+    padding-left: 20px;
+    padding-right: 20px;
+  
+    color: white;
+    font-weight: bold;
+    font-size: 1.2em;
+  }
+  
+  .submit-smartphone {
+    display: none;
+  }
+  
+  /* filtres recherches */
+  
+  .filters-container {
+    display: flex;
+  }
+  
+  .filters-title {
+    display: flex;
+    align-items: center;
+    font-size: 1.25em;
+    font-weight: bold;
+    margin-top: 35px;
+  }
+  
+  .filters-list {
+    display: flex;
+    flex-wrap: wrap;
+  
+    width: 100%;
+  }
+  
+  .filter {
+    display: flex;
+    white-space: nowrap;
+  
+    margin-top: 35px;
+    margin-left: 2%;
+    padding: 11px 20px 11px 20px;
+  
+    border: #e0e0e0 3px solid;
+    border-radius: 40px;
+    
+    cursor: pointer;
+  }
+  
+  .filter:hover {
+    background-color: #deebff;
+    
+  }
+  
+  .filter-icon {
+    display: flex;
+    align-items: center;
+  
+    font-size: 1.3em;
+    color: #0065fc;
+}
+  
+  .filter-content {
+    margin-left: 10px;
+  
+    font-weight: bold;
+    font-size: 1.2em;
+  }
+  
+  .free-accommodation {
+    display: flex;
+    align-items: center;
+  
+    margin-top: 40px;
+  }
+  
+  .i-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-start;
+    flex-shrink: 0;
+  
+    height: 25px;
+    width: 25px;
+    margin-right: 15px;
+    border-radius: 15px;
+    border: 1px solid #d3d3d3;
+  
+    font-size: 0.8em;
+    color: #0065fc;
+  }
+  
+  /* SECTION HEBERGEMENTS */
+  
+  .accommodation-section {
+    display: flex;
+    justify-content: space-between;
+  
+    margin-top: 40px;
+  }
+  
+  .grey-container {
+    background-color: #f2f2f2;
+    border-radius: 30px;
+  }
+  
+  /* filtres hebergements */
+  
+  .filtered-accommodations {
+    width: 66%;
+    padding: 45px 3% 45px 3%;
+  }
+  
+  .card-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .filtered-accommodations--card-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .card {
+    margin-top: 30px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0px 5px 10px#d0d0d0;
+  }
+  
+  .filtered-accommodations--card {
+    display: flex;
+    flex-direction: column;
+  
+    min-height: 205px;
+    width: 31%;
+    padding: 5px;
+  }
+  
+  .card-img {
+    object-fit: cover;
+  }
+  
+  .filtered-accommodations--card-img {
+    width: 100%;
+    height: 110px;
+    border-radius: 15px 15px 0px 0px;
+  }
+  
+  .card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 10px;
+  }
+
+  .card:hover {
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.5);
+}
+
+  .card p {
+    font-size: 0.9em;
+    margin-top: 5px;
+  }
+  
+  .rating {
+    display: flex;
+    font-size: 0.8em;
+    margin-top: 5px;
+  }
+  
+  .blue-star {
+    color: #0065fc;
+  }
+  
+  .grey-star {
+    color: #f2f2f2;
+  }
+  
+  .show-more {
+    width: fit-content;
+    margin-top: 40px;
+  
+    font-size: 1.2em;
+    font-weight: bold;
+  
+    cursor: pointer;
+  }
+  
+  /* LES PLUS POPULAIRES */
+  
+  .most-popular {
+    width: 31%;
+    padding: 45px 2.5% 45px 2.5%;
+    height: fit-content;
+  }
+  
+  .title-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .fa-chart-line {
+    font-size: 1.3em;
+    color: #0065fc;
+  
+    margin-left: 10px;
+  }
+  
+  .most-popular--card-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .most-popular--card {
+    display: flex;
+  
+    width: 100%;
+    height: 160px;
+    padding: 5px;
+  
+    object-fit: contain;
+  }
+  
+  .most-popular--card a {
+    display: flex;
+  }
+  
+  .most-popular--card-content {
+    width: 58%;
+    margin-left: 20px;
+    padding-bottom: 0px;
+  }
+  
+  .most-popular--card-img {
+    min-width: 100px;
+    width: 40%;
+    height: 150px;
+    border-radius: 15px 0px 0px 15px;
+  }
+
+  .most-popular--card:hover {
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.5);
+}
+
+  /* SECTION ACTIVITES */
+  
+  .activities-section {
+    margin-top: 65px;
+  }
+  
+  .activities--card {
+    display: flex;
+    flex-direction: column;
+  
+    min-height: 470px;
+    width: 22.5%;
+    margin-top: 20px;
+    box-shadow: 0px 5px 10px#e1e1e1;
+  }
+  
+  .activities--card-img {
+    border-radius: 20px 20px 0px 0px;
+    height: 420px;
+    width: 100%;
+  }
+  
+  .activities-section h4 {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+  
+    margin: 15px 20px 15px 20px;
+  }
+
+.most-popular--card:hover {
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.5);
+}
+  
+  /* FOOTER */
+  
+  footer {
+    margin-top: 65px;
+    padding: 50px 22% 40px 70px;
+  
+    background-color: #f2f2f2;
+  
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .footer-list-container {
+    margin-right: 25px;
+  }
+  
+  h5 {
+    font-size: 1.2em;
+    white-space: nowrap;
+  }
+  
+  .footer-list {
+    margin-top: 20px;
+  }
+  
+  .footer-list li {
+    margin-bottom: 14px;
+    white-space: nowrap;
+  }
+
+/*********** TABLETTE ***********/
+
+@media (max-width: 1024px) {
+  /*GENERAL */
+
+  body {
+    padding: 0 60px 0 60px;
+  }
+
+  h1 {
+    font-size: 1.4em;
+  }
+
+  h2 {
+    font-size: 1.4em;
+  }
+
+  h3 {
+    font-size: 0.95em;
+  }
+
+  p {
+    font-size: 1em;
+  }
+
+  /* HEADER */
+
+  .navbar-links {
+    font-size: 0.95em;
+  }
+
+  /* SECTION RECHERCHE */
+
+  /* FORMULAIRE RECHERCHE */
+
+  .location-icon {
+    font-size: 1.2em;
+  }
+
+  .search-form {
+    width: 420px;
+  }
+
+  .search-input {
+    font-size: 1.1em;
+  }
+
+  .submit-desktop-tablet {
+    font-size: 1.1em;
+  }
+  /* FILTRES RECHERCHES */
+
+  .filters-container {
+    flex-direction: column;
+  }
+  
+  .filters-title {
+    font-size: 1.1em;
+  }
+
+  .filter-icon {
+    font-size: 1.1em;
+  }
+
+  .filter-content {
+    font-size: 0.95em;
+  }
+
+  /* SECTION HEBERGEMENTS */
+
+  .accommodation-section {
+    flex-direction: column;
+  }
+
+  .grey-container {
+    padding-left: 4%;
+    padding-right: 4%;
+    width: 100%;
+  }
+
+  .card p {
+    font-size: 0.85em;
+    margin-top: 5px;
+  }
+
+  .rating {
+    font-size: 0.7em;
+    margin-top: 5px;
+  }
+
+  .show-more {
+    font-size: 1.1em;
+  }
+
+  .most-popular {
+    margin-top: 40px;
+  }
+
+  .most-popular--card-container {
+    flex-direction: row;
+  }
+
+  /* LES PLUS POPULAIRES */
+
+  .most-popular {
+    padding-top: 30px;
+  }
+
+  .fa-chart-line {
+    font-size: 1.2em;
+  }
+
+  .most-popular--card {
+    width: 31.5%;
+    height: 140px;
+    margin-top: 20px;
+  }
+
+  .most-popular--card-content {
+    margin: 5px 5px 5px 10px;
+  }
+
+  .most-popular h4 {
+    font-size: 0.85em;
+  }
+
+  .most-popular p {
+    font-size: 0.75em;
+  }
+
+  .most-popular--card-img {
+    height: 130px;
+  }
+
+  /* SECTION ACTIVITES */
+
+  .activities--card {
+    min-height: 250px;
+    width: 21%;
+  }
+
+  .activities--card-img {
+    height: 200px;
+  }
+
+  .activities-section h4 {
+    font-size: 1.1em;
+    margin: 10px 15px 10px 15px;
+  }
+
+  /* FOOTER */
+
+  h5 {
+    font-size: 1.1em;
+  }
+
+  .footer-list li {
+    font-size: 0.9em;
+    margin-bottom: 14px;
+  }
+}
+
+/********* SMARTPHONE *********/
+
+@media (max-width: 768px) {
+  /*GENERAL */
+
+  body {
+    width: 100%;
+    padding: 0;
+  }
+
+  h1 {
+    margin-bottom: 20px;
+  }
+
+  h4 {
+    font-size: 1.1em;
+  }
+
+  /* HEADER */
+
+  header {
+    flex-direction: column;
+    align-items: center;
+
+    padding-top: 20px;
+  }
+
+  nav {
+    width: 100%;
+    margin-top: 60px;
+  }
+
+  .navbar-items {
+    width: 50%;
+    margin: 0;
+  }
+  .navbar-links {
+    display: flex;
+    justify-content: center;
+
+    margin: 0;
+    padding: 0 50% 20px 50%;
+
+    border-bottom: #f2f2f2 5px solid;
+    width: 100%;
+  }
+
+  .navbar-links:hover {
+    border-top: 0px;
+    border-bottom: 5px solid #0065fc;
+  }
+
+  /* SECTION RECHERCHE */
+
+  .search-section {
+    margin: 20px 0 0 0;
+    padding: 4%;
+  }
+
+  /* FORMULAIRE RECHERCHE */
+
+  .search-form {
+    margin-top: 40px;
+    width: 100%;
+  }
+
+  .search-input {
+    padding-left: 55px;
+    padding-right: 60px;
+  }
+
+  .fa-magnifying-glass input {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+  }
+  .submit-desktop-tablet {
+    display: none;
+  }
+
+  .submit-smartphone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 50px;
+    border-radius: 0 15px 15px 0;
+
+    font-size: 1em;
+  }
+
+  /* FILTRES RECHERCHE */
+
+  .filters-container {
+    flex-direction: column;
+    margin-bottom: 40px;
+  }
+
+  .filters-title {
+    margin-top: 45px;
+  }
+
+  .filters-list {
+    justify-content: space-between;
+  }
+
+  .filter {
+    align-items: center;
+    white-space: normal;
+
+    margin-left: 0;
+    margin-top: 15px;
+    padding-right: 10px;
+
+    height: 50px;
+    width: 48%;
+
+    border: #e0e0e0 2px solid;
+    border-radius: 50px;
+  }
+
+  .filter-content {
+    font-size: 0.8em;
+    margin-left: 4px;
+  }
+
+  /* CARTES GENERAL */
+
+  .card-container {
+    flex-direction: column;
+  }
+
+  .card {
+    width: 100%;
+    margin-top: 15px;
+    height: 70px;
+  }
+
+  .card a {
+    width: 100%;
+  }
+
+  .rating {
+    margin-top: 5px;
+  }
+
+  /* SECTION HEBERGEMENTS */
+
+  .accommodation-section {
+    margin-top: 0;
+    flex-direction: column-reverse;
+  }
+
+  .grey-container {
+    border-radius: 0;
+  }
+
+  /* HEBERGEMENTS FILTRES */
+
+  .filtered-accommodations {
+    background-color: white;
+  }
+
+  .filtered-accommodations--card {
+    padding: 8px;
+  }
+
+  .filtered-accommodations--card-img {
+    height: 120px;
+  }
+
+  .show-more {
+    display: none;
+  }
+
+  /* LES PLUS POPULAIRES */
+
+  .most-popular {
+    margin-top: 25px;
+  }
+
+  .most-popular--card-container {
+    padding-top: 15px;
+  }
+
+  .most-popular--card {
+    height: 150px;
+  }
+
+  .most-popular--card-img {
+    height: 140px;
+  }
+
+  .most-popular h4 {
+    font-size: 1.1em;
+  }
+
+  /* SECTION ACTIVITES */
+
+  .activities-section {
+    padding: 20px 4% 30px 4%;
+  }
+
+  .activities-section h3 {
+    max-width: 200px;
+    margin-bottom: 5px;
+  }
+
+  .activities--card {
+    min-height: 200px;
+    width: 100%;
+
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+
+  .activities--card-img {
+    height: 150px;
+  }
+  /* FOOTER */
+
+  footer {
+    flex-direction: column;
+    padding: 40px 0px 20px 10%;
+    margin-top: 40px;
+  }
+
+  .footer-list-container {
+    margin-bottom: 25px;
+  }
+
+  h5 {
+    margin-bottom: 20px;
+    white-space: pre-wrap;
+  }
+
+  .footer-list li {
+    white-space: pre-wrap;
+  }
+}
